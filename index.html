@@ -23,57 +23,264 @@
         font-family: "Poppins", sans-serif;
       }
     </style>
-  </head>
+    <!-- customized tailwind  -->
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+          tailwind.config = {
+            theme: {
+              extend: {
+                colors: {
+                  "biker-bg": "rgba(231, 111, 81, 0.10)",
+                  "biker-color": "#E76F51",
+                },
+              },
+            },
+          };
+        </script>
+      </head>
 
-  <body class="poppins">
-    <header>
-      <nav class="mx-40 my-14">
-        <div class="navbar bg-base-100">
-          <div class="flex-1">
-            <div class="dropdown">
-              <label tabindex="0" class="btn btn-ghost lg:hidden">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M4 6h16M4 12h8m-8 6h16"
-                  />
-                </svg>
-              </label>
-              <ul
-                tabindex="0"
-                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
-              >
-                <li><a>Home</a></li>
-                <li><a>Shop</a></li>
-                <li><a>News</a></li>
-                <li><a>Contact</a></li>
-              </ul>
+      <body class="poppins">
+        <header class="mx-40 my-14 md:container md:max-auto">
+          <nav class="">
+            <div class="navbar bg-base-100">
+              <div class="flex-1">
+                <div class="dropdown">
+                  <label tabindex="0" class="btn btn-ghost lg:hidden">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M4 6h16M4 12h8m-8 6h16"
+                      />
+                    </svg>
+                  </label>
+                  <ul
+                    tabindex="0"
+                    class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+                  >
+                    <li><a>Home</a></li>
+                    <li><a>Shop</a></li>
+                    <li><a>News</a></li>
+                    <li><a>Contact</a></li>
+                  </ul>
+                </div>
+                <a class="btn btn-ghost normal-case text-4xl">Biker Zone</a>
+              </div>
+              <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1 text-base">
+                  <li><a>Home</a></li>
+                  <li><a>Shop</a></li>
+                  <li><a>News</a></li>
+                  <li><a>Contact</a></li>
+                </ul>
+              </div>
+              <div class="">
+                <button class="btn bg-biker-color text-xl text-white">
+                  Login
+                </button>
+              </div>
             </div>
-            <a class="btn btn-ghost normal-case text-4xl">Biker Zone</a>
+          </nav>
+          <!-- slider or carousel  -->
+          <div class="carousel w-full lg:h-[550px] bg-biker-bg">
+            <div id="slide1" class="carousel-item relative w-full">
+              <div class="flex flex-col lg:flex-row p-4 lg:p-24">
+                <div class="space-y-7 flex-1">
+                  <h2 class="text-6xl font-bold">
+                    Ride-on R15 V4 <br />
+                    with Smile
+                  </h2>
+                  <p>
+                    Amet minim mollit non deserunt ullamco est sit aliqua dolor
+                    do amet sint. Velit officia consequat duis enim velit
+                    mollit.
+                  </p>
+                  <button class="btn bg-biker-color text-xl text-white">
+                    Purchase
+                  </button>
+                </div>
+                <div class="flex-1">
+                  <img src="/images//slider/bike1.png" class="w-[406px]" />
+                </div>
+              </div>
+              <div
+                class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+              >
+                <a href="#slide4" class="btn btn-circle">❮</a>
+                <a href="#slide2" class="btn btn-circle">❯</a>
+              </div>
+            </div>
+            <div id="slide2" class="carousel-item relative w-full">
+              <div class="flex flex-col lg:flex-row p-4 lg:p-24">
+                <div class="space-y-7 flex-1">
+                  <h2 class="text-6xl font-bold">
+                    Ride-on R15 V4 <br />
+                    with Smile
+                  </h2>
+                  <p>
+                    Amet minim mollit non deserunt ullamco est sit aliqua dolor
+                    do amet sint. Velit officia consequat duis enim velit
+                    mollit.
+                  </p>
+                  <button class="btn bg-biker-color text-xl text-white">
+                    Purchase
+                  </button>
+                </div>
+                <div class="flex-1">
+                  <img src="/images//slider/bike2.png" class="w-[406px]" />
+                </div>
+              </div>
+              <div
+                class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+              >
+                <a href="#slide1" class="btn btn-circle">❮</a>
+                <a href="#slide3" class="btn btn-circle">❯</a>
+              </div>
+            </div>
+            <div id="slide3" class="carousel-item relative w-full">
+              <div class="flex flex-col lg:flex-row p-4 lg:p-24">
+                <div class="space-y-7 flex-1">
+                  <h2 class="text-6xl font-bold">
+                    Ride-on R15 V4 <br />
+                    with Smile
+                  </h2>
+                  <p>
+                    Amet minim mollit non deserunt ullamco est sit aliqua dolor
+                    do amet sint. Velit officia consequat duis enim velit
+                    mollit.
+                  </p>
+                  <button class="btn bg-biker-color text-xl text-white">
+                    Purchase
+                  </button>
+                </div>
+                <div class="flex-1">
+                  <img src="/images//slider/bike3.png" class="w-[406px]" />
+                </div>
+              </div>
+              <div
+                class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+              >
+                <a href="#slide2" class="btn btn-circle">❮</a>
+                <a href="#slide4" class="btn btn-circle">❯</a>
+              </div>
+            </div>
+            <div id="slide4" class="carousel-item relative w-full">
+              <div class="flex flex-col lg:flex-row p-4 lg:p-24">
+                <div class="space-y-7 flex-1">
+                  <h2 class="text-6xl font-bold">
+                    Ride-on R15 V4 <br />
+                    with Smile
+                  </h2>
+                  <p>
+                    Amet minim mollit non deserunt ullamco est sit aliqua dolor
+                    do amet sint. Velit officia consequat duis enim velit
+                    mollit.
+                  </p>
+                  <button class="btn bg-biker-color text-xl text-white">
+                    Purchase
+                  </button>
+                </div>
+                <div class="flex-1">
+                  <img src="/images//slider/bike4.png" class="w-[406px]" />
+                </div>
+              </div>
+              <div
+                class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+              >
+                <a href="#slide3" class="btn btn-circle">❮</a>
+                <a href="#slide1" class="btn btn-circle">❯</a>
+              </div>
+            </div>
           </div>
-          <div class="navbar-center hidden lg:flex">
-            <ul class="menu menu-horizontal px-1 text-base">
-              <li><a>Home</a></li>
-              <li><a>Shop</a></li>
-              <li><a>News</a></li>
-              <li><a>Contact</a></li>
-            </ul>
-          </div>
-          <div class="">
-            <button class="btn btn-error text-xl text-white">Login</button>
-          </div>
-        </div>
-      </nav>
-    </header>
-    <main></main>
-    <footer></footer>
-  </body>
+        </header>
+        <main class="md:container md:max-auto">
+          <section class="my-32">
+            <!-- featured bikes -->
+            <h2 class="font-semibold text-5xl">Featured Bikes In This Year</h2>
+            <p class="text-sm font-semibold text-biker-color">
+              Best bike collection
+            </p>
+            <hr />
+            <div class="grid grid-cols-3">
+              <img src="images/others/feature-bike.png" alt="" />
+              <img src="images/others/feature-bike.png" alt="" />
+              <img src="images/others/feature-bike.png" alt="" />
+            </div>
+          </section>
+          <section class="my-32">
+            <!-- latest news  -->
+            <h1 class="text-5xl font-semibold text-center mb-12">
+              Latest Bikes
+            </h1>
+            <div class="grid gap-5 grid-cols-1 md:grid-cold-2 lg:grid-cols-3">
+              <div class="card w-96 bg-base-100 shadow-xl">
+                <figure>
+                  <img src="/images//others/latest1.png" alt="Shoes" />
+                </figure>
+                <div class="card-body">
+                  <h2 class="text-3xl font-semibold">Ducati XDIAVEL S-73</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Lacus, fermentum amet faucibus sed id nisi lectus at.
+                  </p>
+                  <div class="card-actions">
+                    <button class="btn bg-biker-color text-white">
+                      Read More
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="card w-96 bg-base-100 shadow-xl">
+                <figure>
+                  <img src="/images//others/latest2.png" alt="Shoes" />
+                </figure>
+                <div class="card-body">
+                  <h2 class="text-3xl font-semibold">Motorcycles & Scooters</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Lacus, fermentum amet faucibus sed id nisi lectus at.
+                  </p>
+                  <div class="card-actions">
+                    <button class="btn bg-biker-color text-white">
+                      Read More
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="card w-96 bg-base-100 shadow-xl">
+                <figure>
+                  <img src="/images//others/latest3.png" alt="Shoes" />
+                </figure>
+                <div class="card-body">
+                  <h2 class="text-3xl font-semibold">2021 Honda CBR500R</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Lacus, fermentum amet faucibus sed id nisi lectus at.
+                  </p>
+                  <div class="card-actions">
+                    <button class="btn bg-biker-color text-white">
+                      Read More
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+        <footer></footer>
+      </body>
+    </html>
+  </head>
 </html>
